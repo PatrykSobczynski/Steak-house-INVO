@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Steak house</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="wrap">
+            <nav>
+                <div class="leftNavBar">
+                    <a href="#" class="showMenu">
+                        <img src="img/l.png" alt="Steak house logo">
+                    </a>
+                    <a href="#" class="menuElement">
+                        <p>Steaks</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <p>Burgers</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <p>French fries</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <p>Drinks</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <p>Gdzie dowozimy?</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <p>Kontakt</p>
+                    </a>
+                </div>
+                <div class="rightNavBar">
+                    <a href="#" class="menuElement">
+                        <img class="imgNav" src="img/mojekonto.svg" alt="user">
+                        <p>Moje konto</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <img class="imgNav" src="img/koszyk.svg" alt="shopping
+                            basket">
+                        <p>Koszyk</p>
+                    </a>
+                    <a href="#" class="menuElement">
+                        <img class="imgNav" src="img/zamow_ikona.svg" alt="order
+                            icon">
+                        <p>Zamów</p>
+                    </a>
+                </div>
+            </nav>
+            <main>
+                <div class="sale">
+                    <header class="hSale"><span class="blackBcg">Rabat 10%</span>
+                        na
+                        pierwsze zamówienie!</header>
+                    <p class="textSale">Do 20 stycznia złóż zamówienie na
+                        stronie i skorzystaj z <span
+                            class="boldFont">promocji -10%</span>. Spiesz się,
+                        czas trwania promocji do końca lutego.</p>
+                    <button class="orderOnline">Zamów online</button>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper firstSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="slider" src="img/Bitmapv.png"
+                                alt="steak">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="slider" src="img/Bitmapv.png"
+                                alt="steak">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="slider" src="img/Bitmapv.png"
+                                alt="steak">
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="banner">
+                <article class="logoStrip">
+                    <img class="logo" src="img/Bitmap-4.png" alt="pyszne.pl">
+                    <img class="logo" src="img/Bitmap-2.png" alt="deilgoo">
+                    <img class="logo" src="img/Bitmap-5.png" alt="Glovo">
+                    <img class="logo" src="img/Bitmap.png" alt="Uber Eats">
+                    <img class="logo" src="img/Bitmap-3.png" alt="Bolt Food">
+                </article>
+            </div>
+            <article class="advertisements">
+                <div class="leftAdv">
+                    <p class="advHeader">
+                        Zestaw dla 3 osób
+                    </p>
+                    <p class="advText">
+                        Razem smakuje lepiej! Zamów zestawy obiadowy dla 3 osób
+                        już od <span class="blackBcg">39 zł</span>
+                    </p>
+                    <button class="orderOnline">Zamów online</button>
+                </div>
+                <div class="rightAdv">
+                    <p class="advHeader">
+                        UberEats
+                    </p>
+                    <p class="advText">
+                        Zamawiaj w aplikacji <span class="redBcg">10% taniej.</span>
+                        Pobierz aplikację UberEats już dziś.
+                    </p>
+                    <div class="advLogo">
+                        <img class="advL" src="img/Group 4.svg" alt="sklep
+                            play">
+                        <img class="advL" src="img/App_Store_(iOS).svg" alt="App
+                            store">
+                        <img class="advL" src="img/huawei-app-badge-9757fa
+                            2.svg" alt="huawei app">
+                    </div>
+                    <button class="orderOnline">Zamów online</button>
+                </div>
+            </article>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/drop_down_menu.js"></script>
+        <script>
+        const swiper = new Swiper(".firstSwiper", {
+            autoplay: {
+                delay: 3000,
+            }
+        });
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Sofia-Pro', 'roboto', arial, sans-serif;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 1px 21px rgba(0, 0, 0, 0.0520088);
+        letter-spacing: 1px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            transition: 0.3s;
+            cursor: default;
+        }
+    
+        p {
+            text-align: center;
+        }
+
+        p:hover {
+            color: rgb(119, 119, 119);
+            box-shadow: 0 2px 0 0 #920303;
+            cursor: pointer;
+    
+        }
+    
+        .imgNav {
+            height: 20px;
+            margin: 0 0 0.5vw 0;
+        }
+    
+        .leftNavBar, .rightNavBar {
+            display: flex;
+            align-items: center;
+            margin: 0.5% 5%;
+    
+            a {
+                display: flex;
+                align-items: center;
+                margin: 0 0.5vw;
+                padding: 0.5vw 1vw;
+            }
+        }
+
+        .leftNavBar {
+            a:nth-child(1) {
+                margin: 0 1vw 0 0;
+                padding: 0;
+            }
+        }
+
+        .rightNavBar {
+            a {
+                flex-direction: column;
+
+            }
+
+            a:nth-last-child(1) {
+                background-color: #920303;
+                color: white;
+                border-radius: 10px;
+            }
+
+            a:nth-last-child(1):hover {
+                cursor: pointer;
+                background-color: #770707;
+            }
+
+            a:nth-last-child(1) p:hover  {
+                color: rgb(226, 226, 226);
+                box-shadow: 0 1.5px 0 0 rgb(226, 226, 226);
+            }
+            
+        }        
+    }
+
+    main {
+        display: flex;
+        margin-left: 5%;
+
+        .sale {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 20px;
+
+            .hSale {
+                font-weight: bold;
+                font-size: 56px;
+                margin: 0 0 2vw;
+            }
+
+            .textSale {
+                margin: 0 0 2vw;
+                width: 50%;
+            }
+
+            .boldFont {
+                font-weight: bold;
+            }
+        }
+
+        .swiper {
+            height: 65vh;
+            flex-basis: 50%;
+
+            .slider {
+                height: 100%;
+                width: 50vw;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    article.logoStrip {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2vw 0;
+    }
+
+    article.advertisements {
+        display: flex;
+        color: white;
+
+        .leftAdv, .rightAdv {
+            display: flex;
+            flex-basis: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 40vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            padding: 1vw 5vw;
+        }
+
+        .leftAdv {
+            background-image: url("bcg_img/dana-devolk-x2cNcfz_xXU-unsplash.png");
+            margin: 0 0.25vw 2vw 2vw;
+        }
+
+        .rightAdv {
+            background-image: url("bcg_img/aplikacja.png");
+            margin: 0 2vw 2vw 0.25vw; 
+        }
+
+        .advHeader {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .advText {
+            font-size: 20px;
+            width: 50%;
+            margin: 1vh 0 0;
+        }
+
+        .advLogo img {
+            margin: 1vh 0.5vh 0 0;
+            cursor: pointer;
+        }
+
+        .orderOnline {
+            margin: 1vh 0;
+        }
+
+    }
+
+    .orderOnline {
+        background-color: #920303;
+        color: white;
+        border: 0;
+        padding: 1vw 2vw;
+        border-radius: 10px;
+        letter-spacing: 1px;
+        transition: 0.3s;
+
+        p:hover {
+            box-shadow: 0 1.5px 0 0 rgb(226, 226, 226);
+        }
+        
+    }
+
+    .orderOnline:hover {
+        color: rgb(119, 119, 119);
+        background-color: #770707;
+        cursor: pointer;
+    }
+
+    .blackBcg {
+        background-color: black;
+        color: white;
+    }
+
+    .redBcg {
+        background-color:#920303;
+    }
+}
+
+@media (max-width: 1050px) {
+    
+    body {
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }   
+    }
+}
+
+@media (max-width: 650px) {
+
+    body {
+        main {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .sale, .swiper {
+                flex-basis: 100%;
+                height: auto;
+            }
+
+            .swiper {
+                margin: 2vw 4vw 0vw 0;
+                .slider {
+                    width: 100%;
+                }
+            }
+        }
+
+        .banner {
+            overflow: hidden;
+
+            article.logoStrip {
+            
+                animation: logoMove 10s linear infinite;
+
+                .logo {
+                    margin: 0 1vw;
+                }
+    
+            }
+        }  
+        
+        article.advertisements {
+            display: block;
+
+            .leftAdv, .rightAdv {
+                margin: 0 2vw 2vw 2vw;
+            }
+        }
+    }
+
+    @keyframes logoMove {
+        from {
+            transform: translateX(120%);
+        }
+
+        to {
+            transform: translateX(-120%);
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        nav {
+            
+            justify-content: center;
+
+            .leftNavBar, .rightNavBar {
+
+                flex-direction: column;
+
+                a {
+                    margin: 1.3vh 0.5vw;
+                }
+
+                .showMenu {
+                    margin: 2vh 0;
+                }
+
+                .menuElement {
+                    display: none;
+                    transition: 5s;
+                }
+
+                .hiddenMenu {
+                    display: flex;
+                }
+            }
+
+            .leftNavBar {
+                a:nth-child(1) {
+                    margin: 2vw 1vw;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+

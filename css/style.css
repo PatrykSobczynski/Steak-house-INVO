@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sofia-Pro', 'roboto', arial, sans-serif;
+}
+
+body nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 21px rgba(0, 0, 0, 0.0520088);
+  letter-spacing: 1px;
+}
+
+body nav a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  cursor: default;
+}
+
+body nav p {
+  text-align: center;
+}
+
+body nav p:hover {
+  color: #777777;
+  box-shadow: 0 2px 0 0 #920303;
+  cursor: pointer;
+}
+
+body nav .imgNav {
+  height: 20px;
+  margin: 0 0 0.5vw 0;
+}
+
+body nav .leftNavBar, body nav .rightNavBar {
+  display: flex;
+  align-items: center;
+  margin: 0.5% 5%;
+}
+
+body nav .leftNavBar a, body nav .rightNavBar a {
+  display: flex;
+  align-items: center;
+  margin: 0 0.5vw;
+  padding: 0.5vw 1vw;
+}
+
+body nav .leftNavBar a:nth-child(1) {
+  margin: 0 1vw 0 0;
+  padding: 0;
+}
+
+body nav .rightNavBar a {
+  flex-direction: column;
+}
+
+body nav .rightNavBar a:nth-last-child(1) {
+  background-color: #920303;
+  color: white;
+  border-radius: 10px;
+}
+
+body nav .rightNavBar a:nth-last-child(1):hover {
+  cursor: pointer;
+  background-color: #770707;
+}
+
+body nav .rightNavBar a:nth-last-child(1) p:hover {
+  color: #e2e2e2;
+  box-shadow: 0 1.5px 0 0 #e2e2e2;
+}
+
+body main {
+  display: flex;
+  margin-left: 5%;
+}
+
+body main .sale {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+}
+
+body main .sale .hSale {
+  font-weight: bold;
+  font-size: 56px;
+  margin: 0 0 2vw;
+}
+
+body main .sale .textSale {
+  margin: 0 0 2vw;
+  width: 50%;
+}
+
+body main .sale .boldFont {
+  font-weight: bold;
+}
+
+body main .swiper {
+  height: 65vh;
+  flex-basis: 50%;
+}
+
+body main .swiper .slider {
+  height: 100%;
+  width: 50vw;
+  object-fit: cover;
+}
+
+body article.logoStrip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2vw 0;
+}
+
+body article.advertisements {
+  display: flex;
+  color: white;
+}
+
+body article.advertisements .leftAdv, body article.advertisements .rightAdv {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 1vw 5vw;
+}
+
+body article.advertisements .leftAdv {
+  background-image: url("bcg_img/dana-devolk-x2cNcfz_xXU-unsplash.png");
+  margin: 0 0.25vw 2vw 2vw;
+}
+
+body article.advertisements .rightAdv {
+  background-image: url("bcg_img/aplikacja.png");
+  margin: 0 2vw 2vw 0.25vw;
+}
+
+body article.advertisements .advHeader {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+body article.advertisements .advText {
+  font-size: 20px;
+  width: 50%;
+  margin: 1vh 0 0;
+}
+
+body article.advertisements .advLogo img {
+  margin: 1vh 0.5vh 0 0;
+  cursor: pointer;
+}
+
+body article.advertisements .orderOnline {
+  margin: 1vh 0;
+}
+
+body .orderOnline {
+  background-color: #920303;
+  color: white;
+  border: 0;
+  padding: 1vw 2vw;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+body .orderOnline p:hover {
+  box-shadow: 0 1.5px 0 0 #e2e2e2;
+}
+
+body .orderOnline:hover {
+  color: #777777;
+  background-color: #770707;
+  cursor: pointer;
+}
+
+body .blackBcg {
+  background-color: black;
+  color: white;
+}
+
+body .redBcg {
+  background-color: #920303;
+}
+
+@media (max-width: 1050px) {
+  body nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  body main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main .sale, body main .swiper {
+    flex-basis: 100%;
+    height: auto;
+  }
+  body main .swiper {
+    margin: 2vw 4vw 0vw 0;
+  }
+  body main .swiper .slider {
+    width: 100%;
+  }
+  body .banner {
+    overflow: hidden;
+  }
+  body .banner article.logoStrip {
+    animation: logoMove 10s linear infinite;
+  }
+  body .banner article.logoStrip .logo {
+    margin: 0 1vw;
+  }
+  body article.advertisements {
+    display: block;
+  }
+  body article.advertisements .leftAdv, body article.advertisements .rightAdv {
+    margin: 0 2vw 2vw 2vw;
+  }
+  @keyframes logoMove {
+    from {
+      transform: translateX(120%);
+    }
+    to {
+      transform: translateX(-120%);
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  body nav {
+    justify-content: center;
+  }
+  body nav .leftNavBar, body nav .rightNavBar {
+    flex-direction: column;
+  }
+  body nav .leftNavBar a, body nav .rightNavBar a {
+    margin: 1.3vh 0.5vw;
+  }
+  body nav .leftNavBar .showMenu, body nav .rightNavBar .showMenu {
+    margin: 2vh 0;
+  }
+  body nav .leftNavBar .menuElement, body nav .rightNavBar .menuElement {
+    display: none;
+    transition: 5s;
+  }
+  body nav .leftNavBar .hiddenMenu, body nav .rightNavBar .hiddenMenu {
+    display: flex;
+  }
+  body nav .leftNavBar a:nth-child(1) {
+    margin: 2vw 1vw;
+  }
+}
